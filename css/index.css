@@ -22,66 +22,23 @@ header{background-color:#F2F2F2;border-top:2px solid #dd5862;border-bottom:1px s
 .com-in{float:left;color:#7d7d7d;display:block;position:relative;margin:0 30px 0 25px;font-size: 14px}
 /*container*/
 .container{width:990px;margin: 0 auto}
+/*carousel*/
 #stage{position: relative;height:700px;perspective:1800px;perspective-origin: 50% 200px;overflow: hidden}
 #cube{width:990px;height:700px;position:absolute;
     transform-origin:50% 50%;
     transform: rotateX(-10deg);
-    transition:all 1s linear;
+    transition:all 1s ease;
     transform-style: preserve-3d;}
 .pic{width:310px;height:440px;position:absolute;left:350px;top:60px;border:1px solid #4a3724;}
 .pic-mask{height:600px;width:300px;position: absolute;}
 .pic-mask:last-child{margin-left:700px}
-
-
-
-
-
-
-
-
-/*!*container-pic*!*/
-/*.section{height: 540px}*/
-/*.section-head h3{float:left;font-size:24px}.section-head h3 .section-head-label{border-left:3px solid #dd5862;font-size:18px;margin-right:10px}*/
-/*.sh-label{border-left:3px solid #dd5862;font-size:18px;margin-right:10px}*/
-/*.fright{float:right}*/
-/*.tag{display:inline-block;margin-left:3px;margin-top:14px;color:#7d7d7d;transition:color 200ms ease}*/
-/*.tag:hover{color:#dd5862}*/
-/*.section-ct{margin-top:22px}*/
-/*.vol-item-lg{float:left;width:640px;margin-top: 14px}*/
-/*.cover-lg{border-radius:8px;width:640px;height:452px}*/
-/*.cover-wrapper{display:block;position:relative;line-height:1}*/
-/*.icon-play-lg{display:inline-block;line-height:1;vertical-align:middle;background:url(../images/icon-index.png) no-repeat top left;height:115px;width:115px;position:absolute;top:169px;left:262px;z-index:9;opacity: 0;filter:alpha(opacity=0)}*/
-/*.play-btn-mask{background:none repeat scroll 0 0 #000;border-radius:4px;height:100%;left:0;opacity:0;filter:alpha(opacity=0);*/
-    /*position:absolute;top:0;width:100%}*/
-/*.title{float:left;font-size:16px;color:#000;margin-top: 4px}*/
-/*.vol-item{float:right;width:303px;margin-bottom:10px;}*/
-/*.vol-right{height: 31px;margin: 15px 15px;width: 273px;border-bottom: 3px solid #cccccc}*/
-/*.v-more{float: right;color: #7d7d7d}*/
-/*.v-more:hover{color:#dd5862}*/
-/*.vol-right h3{float: left;margin-left: 10px;}*/
-/*.singer{margin: 6px 0 14px 20px;}*/
-/*.btn-a{height: 68px;width: 273px;background: #e9e5e5;border: 1px solid #Ccc;display: block;margin-bottom: 16px;}*/
-/*.btn-a:hover h4{color:#dd5862}*/
-/*.singer img{float: left;margin-right: 30px;width:70px;height:68px;border-right: 1px solid #Ccc;}*/
-/*.singer h4{font-size: 18px;margin-top: 8px;color: #2d2d2d}*/
-/*.singer p{color: #7d7d7d;font-size: 16px;margin-top: 7px}*/
-/*.con-title{width: 960px;height: auto}*/
-/*.t-name{position:relative;height:63px;line-height:63px;margin:20px 0 25px;border-bottom: 3px solid #dd5862}*/
-/*.t-title{font-size:30px}*/
-/*.t-number{background-color:#dd5862;border-radius:32px;position:absolute;left:-83px;height:63px;line-height:*/
-/*63px;width:63px;text-align:center;font-size:18px;color:#FFF}*/
-/*.essay-content{word-break:break-all;word-wrap:break-word}*/
-/*.other{display: none}*/
-/*#more p{float: right;margin: 0 auto;border: 1px solid #dd5862;cursor: pointer;color:#dd5862;padding:2px;border-radius: 5px }*/
-/*#more img{float:right;margin-top: -38px;margin-left: 6px;opacity: 0;position: relative;z-index: -1;*/
-    /*-webkit-transition: all 0.8s;*/
-    /*-o-transition: all 0.8s;*/
-    /*transition: all 0.8s;}*/
-/*#more:hover img{opacity: 1}*/
-/*footer*/
-/*.footer{position:absolute;bottom:0;padding: 35px 0;height: 100px;width:100%;background: #dd5862}*/
-/*.footer-box{margin: 0 auto;width: 960px;}*/
-/*.sns{width: 300px;float: left;color: white}*/
-/*.sns h4{margin-bottom: 7px;font-size: 15px}*/
-/*!*other*!*/
-/*.face1{position: fixed;bottom:20px;left:20px;z-index:-1;width:80px;height:80px;display: block;background: url("../images/q1.gif")}*/
+.big-font{margin: 120px auto;font-size:60px;color:#7a583e;text-align: center}
+/*alert page*/
+.a-page{position:absolute;left:50%;top:50%;transition: all 1s ease;width:0;height:0;background:white;opacity:0;overflow: hidden}
+.a-pages{left:0;top:0;width:100%;height:100%;opacity: 1}
+.a-content{width:50px;height:50px;background: red;display: none;}
+.page-close{position: absolute;bottom:80px;width:80px;height:100px;left:50%;cursor: pointer}
+.page-close:hover .line{transform:translateY(-15px) rotate(45deg)}
+.page-close:hover .line1{transform:translateY(15px) rotate(-45deg)}
+.line{width:80px;height:10px;background:gray;transition: all .8s ease;}
+.line1{margin-bottom: 20px}

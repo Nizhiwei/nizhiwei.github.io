@@ -43,13 +43,24 @@
         <div id="picLeft" class="pic-mask"></div>
         <div id="picRight" class="pic-mask"></div>
     </div>
-
+    <div class="big-font">前端网页制作</div>
+    <div id="a-page" class="a-page">
+        <div class="a-content"></div>
+        <div class="a-content"></div>
+        <div class="a-content"></div>
+        <div class="a-content"></div>
+        <div class="a-content"></div>
+        <div class="a-content"></div>
+        <div class="page-close" onclick="picClose()"><div class="line line1"></div><div class="line"></div></div>
+    </div>
 </div>
 <script>
     var cube=document.getElementById('cube');
     var pLeft=document.getElementById('picLeft');
     var pRight=document.getElementById('picRight');
     var pic=document.getElementsByClassName('pic');
+    var con=document.getElementsByClassName('a-content');
+    var page=document.getElementById('a-page');
     var roX=0,roY=0;
     function cc(){
         for(var i=0;i<pic.length;i++){
@@ -74,6 +85,7 @@
                     con="rotateY(300deg)";
                     break;
             }
+                pic[i].index=i;
                 pic[i].style.transform=con+"translateZ(400px)";           //圆周距离
         }
     }
@@ -147,115 +159,20 @@ cc();
     }
     listener(pLeft,"click",tl);
     listener(pRight,"click",tr);
+    function picClick(){
+        for(var i=0;i<pic.length;i++){
+
+            pic[i].onclick=function(){page.className+=" a-pages";con[this.index].style.display='block'};
+        }
+    }
+    picClick();
+    function picClose(){
+     page.className="a-page";
+        for(var i=0;i<con.length;i++){
+            con[i].style.display='none'
+        }
+    }
+    picClose()
 </script>
-    <!--<div id="section" class="section">-->
-        <!--<div class="section-head">-->
-            <!--<h3>-->
-                <!--<span class="sh-label"></span>-->
-                <!--阿狸家族-->
-            <!--</h3>-->
-            <!--<div class="fright">-->
-                <!--<a href="#" class="tag">阿狸</a>-->
-                <!--<a href="#" class="tag">桃子</a>-->
-                <!--<a href="#" class="tag">大熊</a>-->
-                <!--<a href="#" class="tag">影子</a>-->
-                <!--<a href="#" class="tag">米卡</a>-->
-                <!--<a href="#" class="tag">爸爸</a>-->
-                <!--<a href="#" class="tag">妈妈</a>-->
-
-                <!--<a href="#" class="tag">More></a>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="section-ct">-->
-            <!--<div class="vol-item-lg">-->
-                <!--<a href="#" id="wrapper" class="cover-wrapper" target="_blank" style="display: block">-->
-                    <!--<img src="images/vol.jpg" class="cover-lg">-->
-                    <!--<span id="blackBtn" class="icon-play-lg"></span>-->
-                    <!--<div id="black" class="play-btn-mask"></div>-->
-                <!--</a>-->
-                <!--<p class="title"> 我和被子也是好朋友~~</p>-->
-            <!--</div>-->
-            <!--<div class="vol-item">-->
-                <!--<div class="vol-right">-->
-                    <!--<h3 style="font-weight: 700">人物简介</h3>-->
-                    <!--<a href="#" class="v-more">更多></a>-->
-                <!--</div>-->
-                <!--<ul class="singer">-->
-                    <!--<li>-->
-                        <!--<a class="btn-a" href="http://baike.baidu.com/link?url=8bsn5AbCxs4a_rWT-qywExHyO9LT7JBepnPnmQBWQKQOOPrAJv9WqldshvSNaCTVCuMpAKwV2e4Lrj185-MfcK" target="_blank">-->
-                            <!--<img src="images/s1.jpg">-->
-                            <!--<div>-->
-                                <!--<h4><span>桃子</span></h4>-->
-                                <!--<p>阿狸的女朋友</p>-->
-                            <!--</div>-->
-                        <!--</a>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<a class="btn-a" href="http://baike.baidu.com/link?url=8bsn5AbCxs4a_rWT-qywExHyO9LT7JBepnPnmQBWQKQOOPrAJv9WqldshvSNaCTVCuMpAKwV2e4Lrj185-MfcK" target="_blank">-->
-                            <!--<img src="images/s2.jpg">-->
-                            <!--<div>-->
-                                <!--<h4><span>大熊</span></h4>-->
-                                <!--<p>阿狸的男朋友</p>-->
-                            <!--</div>-->
-                        <!--</a>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<a class="btn-a" href="http://baike.baidu.com/link?url=8bsn5AbCxs4a_rWT-qywExHyO9LT7JBepnPnmQBWQKQOOPrAJv9WqldshvSNaCTVCuMpAKwV2e4Lrj185-MfcK" target="_blank">-->
-                            <!--<img src="images/s3.jpg">-->
-                            <!--<div>-->
-                                <!--<h4><span>影子</span></h4>-->
-                                <!--<p>阿狸的影子，心灵伙伴</p>-->
-                            <!--</div>-->
-                        <!--</a>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<a class="btn-a" href="http://baike.baidu.com/link?url=8bsn5AbCxs4a_rWT-qywExHyO9LT7JBepnPnmQBWQKQOOPrAJv9WqldshvSNaCTVCuMpAKwV2e4Lrj185-MfcK" target="_blank">-->
-                            <!--<img src="images/s4.jpg">-->
-                            <!--<div>-->
-                                <!--<h4><span>米卡</span></h4>-->
-                                <!--<p>住在镇上的有钱人</p>-->
-                            <!--</div>-->
-                        <!--</a>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<a class="btn-a" href="http://baike.baidu.com/link?url=8bsn5AbCxs4a_rWT-qywExHyO9LT7JBepnPnmQBWQKQOOPrAJv9WqldshvSNaCTVCuMpAKwV2e4Lrj185-MfcK" target="_blank">-->
-                            <!--<img src="images/s5.jpg">-->
-                            <!--<div>-->
-                                <!--<h4><span>爸爸</span></h4>-->
-                                <!--<p>好绅士的爸爸啊</p>-->
-                            <!--</div>-->
-                        <!--</a>-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-
-        <!--</div>-->
-<!--&lt;!&ndash;footer&ndash;&gt;-->
-<!--<div class="footer">-->
-    <!--<div class="footer-box">-->
-        <!--<div class="sns">-->
-            <!--<h4>联系方式</h4>-->
-            <!--<p>QQ:821855466</p>-->
-            <!--<p>Tell:17858644907</p>-->
-            <!--<a href="mailto:821855466@qq.com" style="color: white"><p>邮箱:821855466@qq.com</p></a>-->
-        <!--</div>-->
-        <!--<div class="sns">-->
-            <!--<h4>友情赞助</h4>-->
-            <!--<p>要交的作业</p>-->
-            <!--<p>怎么可能有赞助</p>-->
-            <!--<a href="images/s5.jpg" style="color: white"><p>摆个附件好了</p></a>-->
-        <!--</div>-->
-        <!--<div class="sns">-->
-            <!--<h4>友情链接</h4>-->
-            <!--<p>我看大部分的网站</p>-->
-            <!--<p>都有这些玩意</p>-->
-            <!--<p>我也摆着好看吧~</p>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
-<!--&lt;!&ndash;other&ndash;&gt;-->
-<!--<div class="face1"></div>-->
 </body>
 </html>
