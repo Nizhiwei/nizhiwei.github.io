@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <link rel="bookmark"  type="image/x-icon"  href="images/favicon.ico"/>
     <link rel="shortcut icon" href="images/favicon.ico">
-    <link href="css/index.css" type="text/css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/index.css" >
+    <meta name="viewport" content="initial-scale=0.67">
     <script src="js/index.js"></script>
     <script src="js/jquery.js"></script>
     <title>Ni's Blog</title>
@@ -43,11 +44,27 @@
         <div id="picLeft" class="pic-mask"></div>
         <div id="picRight" class="pic-mask"></div>
     </div>
-    <div class="big-font">前端网页制作</div>
+    <div class="big-font">前端网页分享</div>
     <div id="a-page" class="a-page">
-        <div class="a-content"></div>
-        <div class="a-content"></div>
-        <div class="a-content"></div>
+        <div class="a-content">
+            <img style="float: left" src="images/1.png">
+            <img style="float: left" src="images/2.png">
+            <img style="float: left" src="images/3.png">
+            <img style="float: left" src="images/4.png">
+        </div>
+        <div class="a-content">
+            <h1>Widget规范</h1>
+            <p>实际的开发中需要用到一些功能比较丰富的主机，如图片轮播，tab标签等，这些组件都需要设计师写Javascript才能完成，
+                考虑前期JavaScript是不对设计师开放的，所以淘宝要提供一些widget库，方便设计调用，形成特定的组件。
+                通过载入淘宝的js框架来渲染。
+            </p>
+
+        </div>
+        <div class="a-content">
+            <div class="first"></div>
+            <div class="second"></div>
+            <a href="03.html"><div class="final"></div></a>
+        </div>
         <div class="a-content"></div>
         <div class="a-content"></div>
         <div class="a-content"></div>
@@ -85,70 +102,70 @@
                     con="rotateY(300deg)";
                     break;
             }
-                pic[i].index=i;
-                pic[i].style.transform=con+"translateZ(400px)";           //圆周距离
+            pic[i].index=i;
+            pic[i].style.transform=con+"translateZ(400px)";           //圆周距离
         }
     }
-cc();
+    cc();
     function listener(ele,type,fn){
-    if(ele.attachEvent){
-        ele.attachEvent("on"+type,fn)
-    }else if(ele.addEventListener) {
-        ele.addEventListener(type,fn,false)
+        if(ele.attachEvent){
+            ele.attachEvent("on"+type,fn)
+        }else if(ele.addEventListener) {
+            ele.addEventListener(type,fn,false)
+        }
     }
-}
     //尝试还原失败，封印！
-//    function startMove(){
-//
-//
-//            console.log(roX);
-//    }
-//    function  stopMove(){
-//        clearInterval(startMove)
-//    }
-//    function down(event){
-////        stopMove();
-//        var event=window.event||event;
-//        var mLeft=event.clientX;
-//        var mTop=event.clientY;
-//        speedX=speedY=0;
-//        document.onmousemove=function(event){
-//            speedX=(event.clientX-mLeft);
-//            speedY=(event.clientY-mTop);
-//            if((speedX%360)==0){
-//                speedX=0
-//            }
-//            if((speedY%360)==0){
-//                speedY=0
-//            }
-//            console.log(speedX);
-//                roX=(roX+speedX);
-//            roY=(roY+speedY);
-//            cube.style.transform=" rotateX("+speedX+"deg) rotateY("+speedY+"deg)";
-//            };
-////            cube.style.transform="rotateY("+(event.clientY-mTop)+"deg)  rotateX("+(event.clientX-mLeft)+"deg)";
-//
-//        document.onmouseup=function(){
-////            stopMove();
-//            document.onmousemove=null;                                               //清除，原来加在元素上，速度跟不上，加在document上就行了
-//            document.onmouseup=null
-//        }
-//    }
-//    function up(){
-////        stopMove();
-//        document.onmousemove=null;
-//        document.onmouseup=null
-//    }
-////        if(event.clientX>cube.offsetLeft){
-////            roX+=10;
-////        }
-////        if(event.clientY>cube.offsetTop){
-////            roY+=10;
-////        }
-////        document.onmousemove=function (){
-////            cube.style.transform="rotateY("+roX+"deg)  rotateX("+roY+"deg)"
-////        }
-////    }
+    //    function startMove(){
+    //
+    //
+    //            console.log(roX);
+    //    }
+    //    function  stopMove(){
+    //        clearInterval(startMove)
+    //    }
+    //    function down(event){
+    ////        stopMove();
+    //        var event=window.event||event;
+    //        var mLeft=event.clientX;
+    //        var mTop=event.clientY;
+    //        speedX=speedY=0;
+    //        document.onmousemove=function(event){
+    //            speedX=(event.clientX-mLeft);
+    //            speedY=(event.clientY-mTop);
+    //            if((speedX%360)==0){
+    //                speedX=0
+    //            }
+    //            if((speedY%360)==0){
+    //                speedY=0
+    //            }
+    //            console.log(speedX);
+    //                roX=(roX+speedX);
+    //            roY=(roY+speedY);
+    //            cube.style.transform=" rotateX("+speedX+"deg) rotateY("+speedY+"deg)";
+    //            };
+    ////            cube.style.transform="rotateY("+(event.clientY-mTop)+"deg)  rotateX("+(event.clientX-mLeft)+"deg)";
+    //
+    //        document.onmouseup=function(){
+    ////            stopMove();
+    //            document.onmousemove=null;                                               //清除，原来加在元素上，速度跟不上，加在document上就行了
+    //            document.onmouseup=null
+    //        }
+    //    }
+    //    function up(){
+    ////        stopMove();
+    //        document.onmousemove=null;
+    //        document.onmouseup=null
+    //    }
+    ////        if(event.clientX>cube.offsetLeft){
+    ////            roX+=10;
+    ////        }
+    ////        if(event.clientY>cube.offsetTop){
+    ////            roY+=10;
+    ////        }
+    ////        document.onmousemove=function (){
+    ////            cube.style.transform="rotateY("+roX+"deg)  rotateX("+roY+"deg)"
+    ////        }
+    ////    }
     function tl(){
         roY+=60;
         cube.style.transform="rotateY("+roY+"deg)";
@@ -161,13 +178,12 @@ cc();
     listener(pRight,"click",tr);
     function picClick(){
         for(var i=0;i<pic.length;i++){
-
             pic[i].onclick=function(){page.className+=" a-pages";con[this.index].style.display='block'};
         }
     }
     picClick();
     function picClose(){
-     page.className="a-page";
+        page.className="a-page";
         for(var i=0;i<con.length;i++){
             con[i].style.display='none'
         }
