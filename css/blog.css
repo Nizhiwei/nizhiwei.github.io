@@ -1,12 +1,3 @@
-/*clean*/
-body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,dl, dt, dd, ul, ol, li,pre,form, fieldset, legend, button, input, textarea,th, td{margin: 0;padding: 0;}
-ul, ol { list-style: none; cursor:default}
-a,a:hover { text-decoration: none; }
-fieldset, img,input,button { border: 0;outline:none; }
-button, input, select, textarea { font-size: 100%; }
-table { border-collapse: collapse; border-spacing: 0; }
-body{font-weight: 400;font-size: 1em;font-family: 'Raleway', Arial, sans-serif;background: #f6f1e6;color: #536d76;}
-.container{margin:0 auto;width:960px;}
 /*header*/
 header{background-color:#F2F2F2;border-top:2px solid #dd5862;border-bottom:1px solid #e9e8e8;margin-bottom:60px;min-width:960px}
 .header-box{*zoom:1;width:960px;height:40px;line-height:41px;margin:0 auto}
@@ -32,7 +23,6 @@ header{background-color:#F2F2F2;border-top:2px solid #dd5862;border-bottom:1px s
 .pic{width:310px;height:440px;position:absolute;left:350px;top:60px;border:1px solid #4a3724;cursor:pointer}
 .pic-mask{height:600px;width:300px;position: absolute;}
 .pic-mask:last-child{margin-left:700px}
-.big-font{margin: 0 auto;font-size:60px;color:#7a583e;text-align: center}
 /*alert page*/
 .a-page{position:absolute;left:50%;top:50%;transition: all 1s ease;width:0;height:0;background:white;opacity:0;overflow: hidden}
 .a-pages{left:0;top:0;width:100%;height:100%;opacity: 1}
