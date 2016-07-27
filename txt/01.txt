@@ -1,0 +1,1 @@
+﻿网页以html，css，javascript，ajax组成，图片来源网络，将更新学习体会以及技术文章。

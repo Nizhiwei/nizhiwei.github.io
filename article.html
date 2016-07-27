@@ -9,25 +9,50 @@
 <body>
 <div class="nav">
     <div class="btn"><div class="triangle"></div></div>
+    <nav>
+        <h1>ARTICLE</h1>
+        <span class="title"><label>01.</label>Ni'BLOG</span>
+        <span class="title"><label>02.</label>Start</span>
+        <span class="title"><label>03.</label>Start</span>
+        <span class="title"><label>04.</label>Start</span>
+        <span class="title"><label>05.</label>Start</span>
+        <span class="title"><label>06.</label>Start</span>
+    </nav>
 </div>
-<div id="content"></div>
+<div id="content">
+<p class="content"></p>
+</div>
 </body>
 <script>
     function cc(){
         var nav=(document.getElementsByClassName('nav'))[0];
         var content=document.getElementById('content');
         nav.onmousemove= function () {
-            nav.style.transform=" rotateY(0deg)";
+            nav.style.transform="translateX(0px) rotateY(0deg)";
             content.style.transform="translateX(260px) rotateY(30deg)";
-
-
-
-        }
+        };
         nav.onmouseout= function () {
             content.style.transform="translateX(0px)  rotateY(0deg)";
-            nav.style.transform="translateX(-260px)  rotateY(30deg)";
+            nav.style.transform="translateX(-260px)  rotateY(-45deg)";
         }
     }
-    cc()
+    cc();
+    function btn(){
+        var title=document.getElementsByClassName('title');
+        var content=(document.getElementsByClassName('content'))[0];
+        var xhr=new XMLHttpRequest();
+        for(var i=0;i<title.length;i++){
+            title[i].index=i;
+            title[i].onclick=function(){
+                xhr.open("get","txt/0"+(this.index+1)+".txt",false);
+                xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+                xhr.send();
+                if((xhr.status>=200&&xhr.status<300)||xhr.status==304){
+                    content.innerHTML=xhr.responseText;
+                }else {content.innerHTML="404：文章未找到"}
+            }
+        }
+    }
+    btn()
 </script>
 </html>
