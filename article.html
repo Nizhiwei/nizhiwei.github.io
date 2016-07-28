@@ -11,16 +11,20 @@
     <div class="btn"><div class="triangle"></div></div>
     <nav>
         <h1>ARTICLE</h1>
-        <span class="title"><label>01.</label>Ni'BLOG</span>
-        <span class="title"><label>02.</label>Start</span>
-        <span class="title"><label>03.</label>Start</span>
-        <span class="title"><label>04.</label>Start</span>
-        <span class="title"><label>05.</label>Start</span>
-        <span class="title"><label>06.</label>Start</span>
+        <span class="title"><label>01.</label>ali_One</span>
+        <span class="title"><label>02.</label>ali_Two</span>
+        <span class="title"><label>03.</label>ali_Three</span>
+        <span class="title"><label>04.</label>ali_Four</span>
+        <span class="title"><label>05.</label>ali_Five</span>
+        <span class="title"><label>06.</label>ali_Six</span>
     </nav>
 </div>
 <div id="content">
-<p class="content"></p>
+<div class="content">
+    <p style="font-size: 100px;font-weight:800">Ni's BLOG</p>
+    <p style="margin-top: 60px;font-size: 36px;font-weight:600">正在脑洞设计中...</p>
+</div>
+    <!--<div id='conBtn'>↓</div>-->
 </div>
 </body>
 <script>
@@ -43,16 +47,16 @@
         var xhr=new XMLHttpRequest();
         for(var i=0;i<title.length;i++){
             title[i].index=i;
-            title[i].onclick=function(){
+            title[i].onclick=function gg(){
                 xhr.open("get","txt/0"+(this.index+1)+".txt",false);
                 xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
                 xhr.send();
                 if((xhr.status>=200&&xhr.status<300)||xhr.status==304){
-                    content.innerHTML=xhr.responseText;
+                    content.innerHTML="<img src='images/0 ("+(this.index+1)+").jpg'>"+xhr.responseText;
                 }else {content.innerHTML="404：文章未找到"}
             }
         }
     }
-    btn()
+    btn();
 </script>
 </html>
