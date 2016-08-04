@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<title></title>
+		<style>
+			body,
+			img {
+				font-family: '微软雅黑';
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				font-size: 32px;
+				text-align: center;
+			}
+			
+			p,
+			span,
+			div {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.up {
+				position: relative;
+			}
+			
+			.btn {
+				width: 50%;
+				position: absolute;
+				left: 25%;
+				top: 82%
+			}
+			
+			.tel {
+				width: 100%;
+				position: relative;
+				top: -20px;
+				background: #f4e6bd;
+				overflow: auto;
+			}
+			
+			.down {
+				width: 100%;
+				position: relative;
+				top: -20px;
+				background: #00320c;
+				color: #f4e6bd;
+			}
+			
+			.title {
+				font-size: 32px;
+				color: #00320c;
+				background: #f4e6bd;
+				margin: 10px auto;
+			}
+			.con{text-align: left;overflow: auto;font-size:26px;margin: 20px auto;}
+		</style>
+	</head>
+
+	<body>
+		<div class="up">
+			<img src="img/1.png">
+			<div class="btn">
+				<img src="img/1_18.png">
+			</div>
+		</div>
+		<div class="tel">
+			<p style="width:100%;text-align: center;color:#604c3f">截止今日，已有<b style="font-size: 24px;">10000</b>人预约学车</p>
+			<div>
+				<img src="img/1_22.png" style="width:25%;float: left;">
+				<span style="font-size: 24px;width:50%;color:#036eb8;float: left;margin-top: 15px;">
+	      	点击咨询
+	      	<p style="font-size: 32px;">400-700-3131</p>
+	      	<p style="font-size: 18px;color:#2da7e0">(早8:30-晚21:30)</p>
+	        </span>
+				<img src="img/1_24.png" style="width:25%;float: left;">
+			</div>
+		</div>
+		<div class="down">
+			<div style="width:80%;margin-left: 10%;overflow: auto;">
+				<p style="font-size: 48px;margin: 40px auto;">选OK准没错!</p>
+				<img src="img/1_06.png">
+				<p class="title">战略投资</p>
+				<p class="con">由华睿投资、软银中国、富润控股、今嘉投资、冻导数据共同推出，全国大型移动互联网在线驾考预约平台。</p>
+				<img src="img/1_10.png" style="margin: 10px auto;">
+				<p class="title">平台把控</p>
+				<div class="con">
+					<li style="float: left;">优选好评教练、服务无忧</li>
+					<li style="float: right;">  绝不吃拿要卡 </li>
+					<li style="float: left;">  快递拿证、通过率高  </li>
+					<li style="float: right;">   全程透明学车</li>
+				</div>
+				<p class="title">量身定做</p>
+				<div class="con">
+					<li style="float: left;">VIP · 双休无忧班&nbsp;</li>
+					<li style="float: right;"> VIP · 普通班</li>
+					<li style="float: left;"> VIP · 快速拿证班</li>
+					<li style="float: right;">VIP · 二人一车专享班</span>
+				</div>
+				<div style="margin: 20px auto;position: relative;">
+					<img src="img/1_14.png">
+					<div style="position: absolute;
+    font-size: 34px;top: 40px;left:10%">
+						<p>源于2010年，已服务10W用户</p>
+						<p>1亿资金疯狂补贴</p>
+						<p>打造中国学车的“滴滴”</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		function btn() {
+			$.ajax({
+				type: "post",
+				url: "",
+				success:function(data){
+					console.log(data)
+					alert("成功")
+				}
+				async: true
+			});
+		}
+	</script>
+
+</html>
